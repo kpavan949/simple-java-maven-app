@@ -6,9 +6,10 @@ pipeline {
    steps{
    git 'https://github.com/kpavan949/simple-java-maven-app.git'
    }
-   }stage ('build') {
+   }
+   stage ('build') {
    steps{
-   sh '
+   sh 'mvn clean install'
    }
    }
     
