@@ -2,10 +2,16 @@ pipeline {
   agent any
 
   stages {
-   stage ('build') {
+   stage ('git') {
    steps{
-   echo "hellow world "
+   git 'https://github.com/kpavan949/simple-java-maven-app.git'
+   }
+   }stage ('build') {
+   steps{
+   sh '
    }
    }
+    
+    
    }
 }
